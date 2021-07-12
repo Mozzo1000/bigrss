@@ -1,12 +1,25 @@
 import React, { useState } from "react";
-import { Container, Button } from "@material-ui/core";
+import { Container, Button, Snackbar } from "@material-ui/core";
 import Navigation from '../components/Navigation'
 import '../components/Search.css';
+import MuiAlert from '@material-ui/lab/Alert';
 
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+  
 function AddFeedPage() {
     const [feed, setFeed] = useState("");
     const [feedMessage, setFeedMessage] = useState("")
+    const [openSnackbar, setOpenSnackbar] = useState(false);
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
     
+        setOpenSnackbar(false);
+    };
 
     const postData = async (feed_url) => {
         const requestOptions = {
@@ -27,6 +40,7 @@ function AddFeedPage() {
     const AddFeed = (e) => {
         e.preventDefault();
         postData(feed);
+        setOpenSnackbar(true);
     }
 
     return (
@@ -40,7 +54,11 @@ function AddFeedPage() {
                     <Button variant="outlined" type="submit" onClick={AddFeed}>Add feed</Button>
                 </div>
             </form>
-            <p>{feedMessage}</p>
+            <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleClose}>
+                <Alert onClose={handleClose} severity="info">
+                    {feedMessage}
+                </Alert>
+            </Snackbar>
         </Container>
     )
 }
