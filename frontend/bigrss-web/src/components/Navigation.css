@@ -1,0 +1,13 @@
+.nav-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.nav-header a {
+    text-decoration: inherit;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+}
+
+.nav-header a:hover {
+    text-decoration: underline;
+}

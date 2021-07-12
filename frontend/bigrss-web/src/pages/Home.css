@@ -1,0 +1,13 @@
+.home-header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 13vw;
+  }
+
+  @media screen and (max-width: 750px) {
+    .search {
+        max-width: 560px;
+    }
+    
+}
