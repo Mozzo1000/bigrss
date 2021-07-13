@@ -14,7 +14,7 @@ function SearchPage() {
     return (
         <div>
             <div className="search-page-header">
-            <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
+            <Grid container spacing={3} direction="row" justifyContent="center" alignItems="baseline">
                 <Hidden smDown>
                     <Grid item>
                         <Link to="/"><h2>BigRSS</h2></Link>

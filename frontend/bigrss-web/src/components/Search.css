@@ -7,7 +7,6 @@
     border-radius: 999px;
     width: 75vw;
     margin: 0 auto;
-    margin-top: 40px;
     max-width: 560px;
   }
   
@@ -53,16 +52,3 @@
   .search-buttons-hidden {
     display: none !important;
 }
-  
-  
-  @media screen and (max-width: 750px) {
-    .search {
-      max-width: 560px;
-    }
-    .search-input > input:focus {
-      outline: none;
-    }
-    .search-input {
-      height: 20px;
-    }
-  }
