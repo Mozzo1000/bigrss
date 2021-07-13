@@ -7,15 +7,13 @@
   border-bottom: 1px solid lightgray;
 }
 
-.search-page-header a, a:visited, a:hover, a:active {
-  text-decoration: inherit;
+.search-page-header a, a:visited, a:active {
+  text-decoration: none;
+  color: black;
 }
 
-.search-page-header-body > .search > .search-input {
-  margin-top: 0;
-  width: unset;
-  margin: unset;
-  max-width: unset;
+.search-page-header a:hover {
+  text-decoration: underline;
 }
 
 .search-page-result-link {
