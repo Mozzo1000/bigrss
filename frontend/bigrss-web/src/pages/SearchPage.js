@@ -19,7 +19,7 @@ function SearchPage() {
                     <Link to="/"><h2>BigRSS</h2></Link>
                 </Grid>
                 <Grid item>
-                    <Search hideButtons />
+                    <Search minimize />
                 </Grid>
             </Grid>
             </div>

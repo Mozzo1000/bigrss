@@ -7,7 +7,7 @@ import { useStateValue } from "../StateProvider";
 import { actionTypes } from "../reducer";
 
 
-function Search({ hideButtons = false }) {
+function Search({ minimize = false }) {
     // eslint-disable-next-line
     const [{}, dispatch] = useStateValue();
     const history = useHistory();
@@ -26,14 +26,14 @@ function Search({ hideButtons = false }) {
 
     return (
         <form className="search">
-            {!hideButtons && (
+            {!minimize && (
                 <h1 style={{textAlign: 'center'}}>BigRSS</h1>
             )}
             <div className="search-input">
                 <SearchIcon className="search-input-icon" />
                 <input value={term} onChange={(e) => setTerm(e.target.value)}/>
             </div>
-            {!hideButtons ? (
+            {!minimize ? (
                 <div className="search-buttons">
                     <Button variant="outlined" type="submit" onClick={search}>Search</Button>
                 </div>
