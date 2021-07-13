@@ -25,6 +25,9 @@ function SearchPage() {
                 </Grid>
             </Grid>
             </div>
+            {!term && (
+                <Typography align="center">There doesn't seem to be anything here.. try using the search bar above!</Typography>
+            )}
             { term && (
                 <Container>
                     <Card style={{ border: "none", boxShadow: "none" }}>
