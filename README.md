@@ -1,4 +1,7 @@
 # BigRSS
+[<img src="https://img.shields.io/badge/license-Apache%202-blue">](https://github.com/Mozzo1000/bigrss/blob/master/LICENSE)
+<img src="https://img.shields.io/maintenance/yes/2021">
+
 A RSS search engine
 
 ## Installation
