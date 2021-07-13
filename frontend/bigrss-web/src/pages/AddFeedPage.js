@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Container, Button, Snackbar } from "@material-ui/core";
-import Navigation from '../components/Navigation'
 import '../components/Search.css';
 import MuiAlert from '@material-ui/lab/Alert';
 
@@ -45,7 +44,6 @@ function AddFeedPage() {
 
     return (
         <Container>
-            <Navigation />
             <form className="search">
                 <div className="search-input">
                     <input value={feed} onChange={(e) => setFeed(e.target.value)}/>

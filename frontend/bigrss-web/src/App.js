@@ -4,11 +4,13 @@ import Home from './pages/Home';
 import SearchPage from './pages/SearchPage'
 import StatsPage from './pages/StatsPage'
 import AddFeedPage from './pages/AddFeedPage'
+import Navigation from './components/Navigation'
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Navigation />
         <Switch>
           <Route exact path="/search">
             <SearchPage />

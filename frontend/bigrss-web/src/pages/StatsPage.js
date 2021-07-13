@@ -1,6 +1,5 @@
 import React from 'react'
 import { Grid, Container, Card, CardContent, Typography, CircularProgress } from "@material-ui/core";
-import Navigation from '../components/Navigation'
 import useStats from "../useStats"
 
 function StatsPage() {
@@ -8,7 +7,6 @@ function StatsPage() {
 
     return (
         <Container>
-            <Navigation />
             <h1 style={{textAlign: 'center'}}>Statistics</h1>
             {data ? (
             <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
