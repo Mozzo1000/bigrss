@@ -4,7 +4,7 @@ import { useStateValue } from "../StateProvider";
 import useSearch from "../useSearch"
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
-import { Grid, Container, Card, CardContent, Typography } from "@material-ui/core";
+import { Grid, Container, Card, CardContent, Typography, Hidden } from "@material-ui/core";
 
 function SearchPage() {
     // eslint-disable-next-line
@@ -12,12 +12,14 @@ function SearchPage() {
     const {data} = useSearch(term);
 
     return (
-        <div className="search-page">
+        <div>
             <div className="search-page-header">
-            <Grid container spacing={3} direction="row" justifyContent="flex-start" alignItems="center">
-                <Grid item>
-                    <Link to="/"><h2>BigRSS</h2></Link>
-                </Grid>
+            <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
+                <Hidden smDown>
+                    <Grid item>
+                        <Link to="/"><h2>BigRSS</h2></Link>
+                    </Grid>
+                </Hidden>
                 <Grid item>
                     <Search minimize />
                 </Grid>
