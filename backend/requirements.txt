@@ -4,3 +4,4 @@ flask-marshmallow
 flask-sqlalchemy
 feedparser
 marshmallow-sqlalchemy
+python-dotenv
