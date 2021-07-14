@@ -1,7 +1,7 @@
 import re
 from flask import Flask, request, abort, jsonify
 from sqlalchemy.engine import url
-from sqlalchemy import exc
+from sqlalchemy import exc, desc, asc
 import config
 from models import db, Feeds, Entries, EntriesSchema, ma
 
@@ -40,6 +40,14 @@ def stats():
 @app.route('/v1/search/<query>', methods=['GET'])
 def search(query):
     result_schema = EntriesSchema(many=True)
-    result = Entries.query.filter(Entries.description.match(query)).all()
+    if request.args.get('order'):
+        if request.args.get('order') == 'old':
+            result = Entries.query.filter(Entries.description.match(query)).order_by(asc(Entries.published)).all()
+        elif request.args.get('order') == 'new':
+            result = Entries.query.filter(Entries.description.match(query)).order_by(desc(Entries.published)).all()
+        else:
+            return jsonify({'message': 'Invalid order argument'}), 400
+    else:
+        result = Entries.query.filter(Entries.description.match(query)).order_by(desc(Entries.published)).all()
     return jsonify(result_schema.dump(result))
 app.run()
