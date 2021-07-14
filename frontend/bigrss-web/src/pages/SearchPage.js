@@ -7,6 +7,12 @@ import Search from "../components/Search";
 import { Grid, Container, Card, CardContent, Typography, Hidden } from "@material-ui/core";
 import ReactTimeAgo from 'react-time-ago'
 
+function removeHTML(str){ 
+    var tmp = document.createElement("DIV");
+    tmp.innerHTML = str;
+    return tmp.textContent || tmp.innerText || "";
+}
+
 function SearchPage() {
     // eslint-disable-next-line
     const [{ term }, dispatch] = useStateValue();
@@ -55,7 +61,7 @@ function SearchPage() {
                                     <ReactTimeAgo date={item.published} locale="en-US"/>
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                    {String(item.description).substring(0, 240)}...
+                                    {removeHTML(String(item.description).substring(0, 240))}...
                                 </Typography>
                             </CardContent>
                         </Card>
