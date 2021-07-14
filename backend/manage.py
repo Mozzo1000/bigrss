@@ -3,10 +3,14 @@ from datetime import datetime, timedelta
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from worker.models import Feeds, Entries
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 hours_ago = datetime.today() - timedelta(hours = 2)
 
-engine = create_engine('postgresql://localhost/bigrss', echo = True)
+engine = create_engine(os.environ.get('BRSS_BACKEND_DB_CONNECTION'), echo = True)
 
 Session = sessionmaker(bind = engine)
 session = Session()
