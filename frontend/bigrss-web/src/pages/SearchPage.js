@@ -5,6 +5,7 @@ import useSearch from "../useSearch"
 import { Link } from "react-router-dom";
 import Search from "../components/Search";
 import { Grid, Container, Card, CardContent, Typography, Hidden } from "@material-ui/core";
+import ReactTimeAgo from 'react-time-ago'
 
 function SearchPage() {
     // eslint-disable-next-line
@@ -51,7 +52,7 @@ function SearchPage() {
                                     </a>
                                 </Typography>
                                 <Typography color="textSecondary">
-                                    {String(item.published).split("T")[0]}
+                                    <ReactTimeAgo date={item.published} locale="en-US"/>
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                     {String(item.description).substring(0, 240)}...
