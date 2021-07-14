@@ -31,7 +31,7 @@ function StatsPage() {
                 <div style={{display: 'flex', justifyContent: 'center'}}>
                     <CircularProgress />
                 </div>
-            )};
+            )}
         </Container>
     )
 }
