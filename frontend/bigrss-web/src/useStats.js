@@ -14,7 +14,7 @@ const useStats = () => {
     };
 
     fetchData();
-  });
+  }, []);
 
   return { data };
 };
