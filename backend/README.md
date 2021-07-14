@@ -1,7 +1,7 @@
 # BigRSS backend
 
 ## Development database
-This repository contains a docker-compose file for a development postgres server including pgadmin managment interface. It is not intended to be used in production.
+This repository contains a docker-compose file for a development postgres server including pgAdmin managment interface. It is not intended to be used in production.
 
 ### Environment variables
 The file `docker-database.env` contains environment variables used by the docker containers. It is setup to be used without any further modification but can be changed if neccessary.
@@ -16,3 +16,8 @@ First time the containers are ran the postgres database will automatically creat
 * `docker-compose down`
 #### Remove database volume
 * `docker volume rm backend_database-data`
+
+#### pgAdmin Web GUI
+* Open http://localhost:16543/ in your browser.
+
+**Adding the database server:** use `db` as Host name/address. Username and password is the same as defined in `docker-database.env`.
