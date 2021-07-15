@@ -39,10 +39,6 @@ function Navigation() {
                                 <ListItemIcon><AddIcon /></ListItemIcon>
                                 <ListItemText primary="Add feed" />
                             </ListItem>
-                            <ListItem button>
-                                <ListItemIcon><Brightness4Icon /></ListItemIcon>
-                                <ListItemText primary="Dark/light mode" />
-                            </ListItem>
                         </List>
                     </Drawer>
                 </Grid>
