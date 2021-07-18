@@ -19,6 +19,16 @@ services:
             - "16543:80"
         depends_on: 
             - db   
+    api:
+        build: .
+        ports: 
+            - "5000:5000"
+        environment:
+            - BRSS_BACKEND_DB_CONNECTION=postgresql://admin:password@db/bigrss
+        volumes:
+            - .:/api
+        depends_on: 
+            - db   
 
 volumes:
     database-data: # named volumes can be managed easier using docker-compose
