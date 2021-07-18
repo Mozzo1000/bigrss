@@ -10,7 +10,9 @@ The file `docker-database.env` contains environment variables used by the docker
 First time the containers are ran the postgres database will automatically create the tables neccesarry defined in the file [database/initial_db.sql](https://github.com/Mozzo1000/bigrss/blob/master/backend/database/initial_db.sql). At the moment it does not seed any content just creates the tables.
 
 ## API
-The container for the API is built from the dockerfile defined in the `api` folder. The API can be accessed from http://localhost:5000
+The container for the API is built from the dockerfile defined in the `api` folder. The API can be accessed from http://localhost:5000.
+When doing development on the API I recommend running `api/api.py` directly with Python instead of in the docker container. The API is included as a container to make frontend development easier. 
+You can run `docker-compose up db pgadmin` to only start the database and database management tool.
 
 ### Usage
 #### Start containers
