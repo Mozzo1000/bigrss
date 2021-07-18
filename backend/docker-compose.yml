@@ -11,7 +11,7 @@ services:
         volumes:
             - database-data:/var/lib/postgresql/data/ # persist data even if container shuts down
             - ./database/initial_db.sql:/docker-entrypoint-initdb.d/docker_postgres_init.sql
-    pgadmin-compose:
+    pgadmin:
         image: dpage/pgadmin4
         env_file:
             - docker-database.env # configure postgres
