@@ -50,4 +50,4 @@ def search(query):
     else:
         result = Entries.query.filter(Entries.description.match(query)).order_by(desc(Entries.published)).all()
     return jsonify(result_schema.dump(result))
-app.run()
+app.run(host="0.0.0.0")
