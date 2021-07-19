@@ -6,11 +6,11 @@ function StatsPage() {
     const {data} = useStats();
 
     return (
-        <Container>
+        <Container maxWidth="md">
             <h1 style={{textAlign: 'center'}}>Statistics</h1>
             {data ? (
-            <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
-                <Grid item>
+            <Grid container direction="row" spacing={4}>
+                <Grid item xs={12} sm={6} md={6}>
                     <Card>
                         <CardContent>
                             <Typography variant="h5" color="textPrimary" align="center">Feeds</Typography>
@@ -18,7 +18,7 @@ function StatsPage() {
                         </CardContent>
                     </Card>
                 </Grid>
-                <Grid item>
+                <Grid item xs={12} sm={6} md={6}>
                     <Card>
                         <CardContent>
                             <Typography variant="h5" color="textPrimary" align="center">Entries</Typography>
