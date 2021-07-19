@@ -5,6 +5,7 @@ import SearchPage from './pages/SearchPage'
 import StatsPage from './pages/StatsPage'
 import AddFeedPage from './pages/AddFeedPage'
 import Navigation from './components/Navigation'
+import AboutPage from './pages/AboutPage'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route exact path="/add">
             <AddFeedPage />
+          </Route>
+          <Route exact path="/about">
+            <AboutPage />
           </Route>
         </Switch>
       </Router>
