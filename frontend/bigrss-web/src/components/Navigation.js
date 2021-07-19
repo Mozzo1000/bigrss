@@ -3,7 +3,6 @@ import './Navigation.css';
 import { Link} from "react-router-dom";
 import { Grid, Drawer, List, ListItem, IconButton, ListItemIcon, ListItemText } from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
-import Brightness4Icon from '@material-ui/icons/Brightness4';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
 import BarChartIcon from '@material-ui/icons/BarChart';
