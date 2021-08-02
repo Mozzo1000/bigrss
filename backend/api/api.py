@@ -13,8 +13,13 @@ with app.app_context():
     db.create_all()
 
 @app.route('/v1', methods=['GET'])
+@app.route('/', methods=['GET'])
 def index():
-    return "BIGRSS API"
+    return jsonify(
+        name="bigrss",
+        version="1"
+    )
+
 
 @app.route('/v1/feed', methods=['POST'])
 def add_feed():
