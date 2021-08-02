@@ -6,7 +6,6 @@ import StatsPage from './pages/StatsPage'
 import AddFeedPage from './pages/AddFeedPage'
 import Navigation from './components/Navigation'
 import AboutPage from './pages/AboutPage'
-import Footer from './components/Footer'
 
 function App() {
   return (
@@ -30,7 +29,6 @@ function App() {
             <AboutPage />
           </Route>
         </Switch>
-        <Footer />
       </Router>
     </div>
   );
