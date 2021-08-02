@@ -27,7 +27,7 @@ function Search({ minimize = false }) {
     return (
         <form className="search">
             {!minimize && (
-                <h1 style={{textAlign: 'center'}}>BigRSS</h1>
+                <h1 style={{textAlign: 'center'}}>{process.env.REACT_APP_BRSS_APP_NAME}</h1>
             )}
             <div className="search-input">
                 <SearchIcon className="search-input-icon" />

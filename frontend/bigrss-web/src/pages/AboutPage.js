@@ -10,7 +10,7 @@ function AboutPage() {
         <div>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              About BigRSS
+              About {process.env.REACT_APP_BRSS_APP_NAME}
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
               A search engine that allows you to find articles and resources from RSS based websites from around the world.

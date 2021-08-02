@@ -24,7 +24,7 @@ function SearchPage() {
             <Grid container spacing={3} direction="row" justifyContent="center" alignItems="baseline">
                 <Hidden smDown>
                     <Grid item>
-                        <Link to="/"><h2>BigRSS</h2></Link>
+                        <Link to="/"><h2>{process.env.REACT_APP_BRSS_APP_NAME}</h2></Link>
                     </Grid>
                 </Hidden>
                 <Grid item>
