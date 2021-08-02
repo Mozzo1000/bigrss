@@ -1,0 +1,10 @@
+.footer {
+    position:absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50%, -25%); 
+}
+
+.footer a {
+    color: black;
+}
